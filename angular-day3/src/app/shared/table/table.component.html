@@ -1,0 +1,24 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Usia</th>
+      <th>Pekerjaan</th>
+      <th>Uang Muka (Rp)</th>
+      <th>Harga Motor (Rp)</th>
+      <th>Penghasilan (Rp)</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (creditur of data; track $index) {
+      <tr>
+        <td>{{ creditur.name }}</td>
+        <td>{{ creditur.age }}</td>
+        <td>{{ creditur.occupation }}</td>
+        <td>{{ creditur.dp | number:'1.0-0' }}</td>
+        <td>{{ creditur.amount | number:'1.0-0' }}</td>
+        <td>{{ creditur.salary | number:'1.0-0' }}</td>
+      </tr>
+    }
+  </tbody>
+</table>

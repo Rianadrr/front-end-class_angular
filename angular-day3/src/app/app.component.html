@@ -1,0 +1,23 @@
+<main>
+  <ng-container> 
+    <div class = "container">
+      <div class = "card">
+        <h3>Data Pengajuan Leasing</h3>
+        <shared-table [data]="creditur"></shared-table>
+      </div>
+  
+      <div class = "card">
+        <h3>Data Pengajuan Leasing yang Diterima</h3>
+        <shared-table [data]="acceptedLeasing"></shared-table>
+      </div>
+  
+      <div class = "card">
+        <h3>Pengajuan Leasing</h3>
+        <shared-input (addLeasingEvent)="addLeasing($event)"></shared-input>
+      </div>
+    </div>
+  </ng-container>
+</main>
+
+
+<router-outlet />
